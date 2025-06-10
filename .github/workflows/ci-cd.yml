@@ -31,10 +31,10 @@ jobs:
     - name: Login to DockerHub
       uses: docker/login-action@v2
       with:
-        username: ${{ secrets.Marn }}
+        username: ${{ secrets.minmarn }}
         password: ${{ secrets.Pu9999Mra }}
 
     - name: Push Docker image to DockerHub
       run: |
-        docker tag my-python-app ${{ secrets.Marn }}/my-python-app:latest
+        docker tag my-python-app ${{ secrets.minmarn }}/my-python-app:latest
         docker push ${{ secrets.Pu9999Mra }}/my-python-app:latest
